@@ -2,16 +2,16 @@ const express = require("express")
 const { getAllSnacks, getSnack} = require("../queries/snacks")
 const snacks = express.Router()
 
-snacks.get("/", (req, res) => {
+snacks.get("/", async (req, res) => {
     console.log("GET /snacks")
-    const snacks = getAllSnacks()
+    const snacks = await getAllSnacks()
     res.status(200).json(snacks)
 })
 
-snacks.get("/:id", (req, res) => {
+snacks.get("/:id", async (req, res) => {
     console.log("GET /snacks/:id")
     const {id} = req.params
-    const snack = getSnack(id)
+    const snack = await getSnack(id)
     res.status(200).json(snack)
 })
 
