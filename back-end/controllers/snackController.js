@@ -17,19 +17,19 @@ snacks.get("/:id", async (req, res) => {
 
 snacks.post("/", async (req, res) => {
     console.log("POST /snacks")
-    const snack = createSnack(req.body)
+    const snack = await createSnack(req.body)
     res.status(200).json(snack)
 })
 
 snacks.delete("/:id", async (req, res) => {
     console.log("Delete /snacks/:id")
-    const snack = await deleteSnack(req.params)
+    const snack = await deleteSnack(req.params.id)
     res.status(200).json(snack) 
 })
 
 snacks.put('/:id', async (req, res) => {
     console.log("Put /:id")
-    const song = await editSnack(req.params, req.body)
+    const song = await editSnack(req.params.id, req.body)
     res.status(200).json(song)
 })
 
