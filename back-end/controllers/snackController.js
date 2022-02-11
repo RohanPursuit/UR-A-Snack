@@ -1,18 +1,17 @@
 const express = require("express")
+const { getAllSnacks, getSnack} = require("../queries/snacks")
 const snacks = express.Router()
 
 snacks.get("/", (req, res) => {
     console.log("GET /snacks")
-    const snacks = [
-        {id: 1, name: "Some snack"}, {id: 2, name: "another snack"},
-    ]
+    const snacks = getAllSnacks()
     res.status(200).json(snacks)
 })
 
 snacks.get("/:id", (req, res) => {
     console.log("GET /snacks/:id")
     const {id} = req.params
-    const snack = {id: 1, name: "Some snack"}
+    const snack = getSnack(id)
     res.status(200).json(snack)
 })
 
