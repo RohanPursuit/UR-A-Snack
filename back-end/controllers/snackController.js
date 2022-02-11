@@ -17,7 +17,7 @@ snacks.get("/:id", async (req, res) => {
 
 snacks.post("/", async (req, res) => {
     console.log("POST /snacks")
-    const snack = createSnack(req.body)
+    const snack = await createSnack(req.body)
     res.status(200).json(snack)
 })
 
