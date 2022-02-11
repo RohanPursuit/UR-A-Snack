@@ -18,7 +18,8 @@ snacks.get("/:id", (req, res) => {
 
 snacks.post("/", (req, res) => {
     console.log("POST /snacks")
-    const snack = {id: 3, name: "another snack"}
+    console.log(req.body)
+    const snack = req.body
     res.status(200).json(snack)
 })
 
