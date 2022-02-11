@@ -34,7 +34,7 @@ const getAllSnacks = async () => {
         const deleteSnack = async (id) => {
             try {
                 const deletedSnack = await db.one(
-                "DELETE FROM snacks WHERE id = $1 RETURNING *",
+                "DELETE FROM snacks WHERE id=$1 RETURNING *",
                 id
                 );
                 return deletedSnack;
