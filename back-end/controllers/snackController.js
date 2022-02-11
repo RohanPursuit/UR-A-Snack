@@ -1,5 +1,5 @@
 const express = require("express")
-const { getAllSnacks, getSnack, createSnack} = require("../queries/snacks")
+const { getAllSnacks, getSnack, createSnack, deleteSnack} = require("../queries/snacks")
 const snacks = express.Router()
 
 snacks.get("/", async (req, res) => {
@@ -21,9 +21,9 @@ snacks.post("/", async (req, res) => {
     res.status(200).json(snack)
 })
 
-snacks.delete("/", (req, res) => {
-    console.log("Delete /snacks")
-    const snack = {id: 1, name: "Some snack"}
+snacks.delete("/:id", (req, res) => {
+    console.log("Delete /snacks/:id")
+    const snack = deleteSnack(req.params)
     res.status(200).json(snack) 
 })
 
