@@ -4,4 +4,6 @@ function AllSnacksPage() {
         
       </div>
     );
-  }
+}
+
+export default AllSnacksPage
