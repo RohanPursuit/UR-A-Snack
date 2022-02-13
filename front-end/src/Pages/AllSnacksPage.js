@@ -1,4 +1,5 @@
 import AllSnacks from "../Components/AllSnacksComponent";
+import "../Styles/AllSnacks.css"
 
 function AllSnacksPage() {
     return (
