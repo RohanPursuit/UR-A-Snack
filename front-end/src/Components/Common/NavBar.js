@@ -7,7 +7,7 @@ function NavBar() {
             Hello Nav Bar!
             </Link>
             <Link to="/snack/new">
-
+                New
             </Link>
         </div>
     );
