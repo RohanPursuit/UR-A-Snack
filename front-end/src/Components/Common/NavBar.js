@@ -1,14 +1,18 @@
 import {Link} from "react-router-dom"
+import "../../Styles/NavBar.css"
 
 function NavBar() {
     return (
         <div className="NavBar">
-            <Link to="/snacks">
-            Hello Nav Bar!
+            <Link to="/snacks" className="NavBar-Logo">
+            UR A SNACK
             </Link>
-            <Link to="/snacks/new">
-                New
-            </Link>
+            <div className="New-Snack-container">
+                <Link to="/snacks/new" className="New-Snack-button">
+                    NEW SNACK
+                </Link>
+            </div>
+            
         </div>
     );
 }

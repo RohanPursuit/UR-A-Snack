@@ -19,8 +19,10 @@ function AllSnacks() {
           return(
             <div key={el.id} className="snack-card">
               <img src={el.image} alt="" />
-              {<HeartHealth snackHealth={el.is_healthy}/>}
-              <p>{el.name}</p>
+              <p>
+                {<HeartHealth snackHealth={el.is_healthy}/>}
+                {el.name}
+              </p>
             </div>
           )
         })}
