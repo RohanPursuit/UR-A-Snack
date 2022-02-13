@@ -1,9 +1,10 @@
 import {Routes, Route} from "react-router-dom"
+import NavBar from "./Components/Common/NavBar";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello Nav Bar!</h1>
+      <NavBar/>
       <Routes>
         <Route exact path="/" element={<h2>Hello, world!</h2>}/>
       </Routes>
