@@ -1,0 +1,13 @@
+/* .sidebar {
+	position: absolute;
+	top: 110px;
+	width: 50px;
+	height: 100%;
+	grid-column: span 1;
+	background-color: #252522;
+	z-index: 1;
+} */
+
+.App h2 {
+	margin-top: 120px;
+}
