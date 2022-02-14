@@ -22,7 +22,7 @@ function AllSnacks() {
               <img src={el.image} alt="" />
               <p>
                 {<HeartHealth snackHealth={el.is_healthy}/>}
-                <div>{el.name}</div>
+                {el.name}
               </p>
             </Link>
           )
