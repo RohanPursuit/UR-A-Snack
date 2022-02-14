@@ -21,7 +21,7 @@ function AllSnacks() {
               <img src={el.image} alt="" />
               <p>
                 {<HeartHealth snackHealth={el.is_healthy}/>}
-                {el.name}
+                <div>{el.name}</div>
               </p>
             </div>
           )
