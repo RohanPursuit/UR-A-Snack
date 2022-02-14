@@ -33,6 +33,14 @@ a.snack-card {
 	color: #eb5e28;
 }
 
+.snack-card {
+	transition: all 0.2s ease-in-out;
+}
+
+.snack-card:hover {
+	transform: scale(1.1);
+}
+
 .snack-card p {
 	display: flex;
 	flex-direction: row;
