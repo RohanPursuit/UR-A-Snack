@@ -16,13 +16,13 @@ function AllSnacks() {
   }, [URL])
     return (
       <div className="AllSnacks">
-        {snacks.map(el => {
+        {!!snacks.length && snacks.map(el => {
           return(
             <Link to={/snacks/ + el.id} key={el.id} className="snack-card">
               <img src={el.image} alt="" />
               <p>
                 {<HeartHealth snackHealth={el.is_healthy}/>}
-                <div>{el.name}</div>
+                {el.name}
               </p>
             </Link>
           )
