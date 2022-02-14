@@ -1,6 +1,6 @@
 .AllSnacksPage {
 	margin: 5%;
-	margin-top: 20px;
+	margin-top: 150px;
 }
 
 .AllSnacks {
@@ -30,6 +30,15 @@ a.snack-card {
 	background-color: white;
 	box-shadow: 0px 2px 10px rgb(85, 85, 85);
 	border-radius: 3px;
+	color: #eb5e28;
+}
+
+.snack-card {
+	transition: all 0.2s ease-in-out;
+}
+
+.snack-card:hover {
+	transform: scale(1.1);
 	color: #eb5e28;
 }
 
