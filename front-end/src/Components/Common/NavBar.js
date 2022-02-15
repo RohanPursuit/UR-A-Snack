@@ -9,7 +9,7 @@ function NavBar() {
             </Link>
             <div className="New-Snack-container">
                 <Link to="/snacks/new" className="New-Snack-button">
-                    NEW SNACK
+                    New Snack
                 </Link>
             </div>
             
