@@ -21,25 +21,24 @@ a.snack-card {
 	border-radius: 3px;
 	margin-bottom: 20px;
 }
+
 .snack-card {
-	/* border: 1px solid #000; */
 	width: fit-content;
 	grid-column: span 1;
 	margin: 15px;
+	margin-bottom: 30px;
 	padding: 20px;
 	background-color: white;
 	box-shadow: 0px 2px 10px rgb(85, 85, 85);
 	border-radius: 3px;
 	color: #eb5e28;
-}
-
-.snack-card {
-	transition: all 0.2s ease-in-out;
+	transition: all 0.5s ease;
 }
 
 .snack-card:hover {
 	transform: scale(1.1);
 	color: #eb5e28;
+	z-index: 0;
 }
 
 .snack-card p {
@@ -61,13 +60,20 @@ a.snack-card {
 }
 
 @media all and (max-width: 890px) {
-	/* .AllSnacksPage {
-		margin: 0%;
-		margin-top: 20px;
-	} */
-
 	.AllSnacks {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media all and (max-width: 790px) {
+	.snack-card {
+		margin-left: -11px;
+	}
+}
+
+@media all and (max-width: 700px) {
+	.snack-card {
+		margin-left: -19px;
 	}
 }
