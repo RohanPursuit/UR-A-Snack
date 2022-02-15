@@ -16,7 +16,7 @@ app.use("/snacks", snackController);
 // ROUTES
 app.get("/", (request,response) => {
     console.log("GET request to /");
-    response.send("Grab One or be be One");
+    response.send("Get Snack'n at Snack-a-log!");
   });
 
   app.get("*", (request, response) => {
