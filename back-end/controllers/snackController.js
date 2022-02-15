@@ -30,13 +30,25 @@ snacks.get("/:id", async (req, res) => {
 snacks.post("/", async (req, res) => {
     console.log("POST /snacks")
     const {body} = req
-    if(!body.image.length) body.image = "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image"
+    if(!body.image) {
+        body.image = "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image"
+    }
+
+    body.name = body.name.split(' ').map(el => {
+        if(el.length > 2){
+            return el[0].toUpperCase() + el.slice(1).toLowerCase()
+        }
+        return el
+    }).join(" ")
     
     const snack = await createSnack(body)
     if(!snack.name){
        return res.status(422).json({error: "Some error"})
     }
-    res.status(200).json(snack)
+    res.status(200).json({
+        "success":true,
+        "payload": snack,
+      })
 })
 
 snacks.delete("/:id", async (req, res) => {
