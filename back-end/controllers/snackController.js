@@ -17,7 +17,13 @@ snacks.get("/:id", async (req, res) => {
 
 snacks.post("/", async (req, res) => {
     console.log("POST /snacks")
-    const snack = await createSnack(req.body)
+    const {body} = req
+    if(!body.image.length) body.image = "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image"
+    
+    const snack = await createSnack(body)
+    if(!snack.name){
+       return res.status(422).json({error: "Some error"})
+    }
     res.status(200).json(snack)
 })
 
