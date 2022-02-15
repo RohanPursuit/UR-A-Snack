@@ -2,6 +2,7 @@ import axios from "axios"
 import {useState, useEffect} from "react"
 import {useParams} from "react-router-dom"
 import HeartHealth from "./HeartHealth"
+import "../Styles/SnackDetail.css"
 
 function SnackDetail() {
   const URL = process.env.REACT_APP_API_URL
@@ -22,9 +23,9 @@ function SnackDetail() {
       <div className="SnackDetail">
         <img src={snack.image} alt="" />
         <div>{snack.name}</div>
-        <div>{<HeartHealth snackHealth={snack.is_healthy}/>}</div>
+        {<HeartHealth snackHealth={snack.is_healthy}/>}
         <div>{snack.protein}</div>
-        <div>{snack.add_sugar}</div>
+        <div>{snack.added_sugar}</div>
         <div>{snack.fiber}</div>
       </div>
     );
