@@ -5,14 +5,26 @@ const snacks = express.Router()
 snacks.get("/", async (req, res) => {
     console.log("GET /snacks")
     const snacks = await getAllSnacks()
-    res.status(200).json(snacks)
+    res.status(200).json({
+        "success":true,
+        "payload": snacks,
+      })
 })
 
 snacks.get("/:id", async (req, res) => {
     console.log("GET /snacks/:id")
     const {id} = req.params
     const snack = await getSnack(id)
-    res.status(200).json(snack)
+    if(snack.received === 0){
+        return res.status(404).json({
+            "success":false,
+            "payload": "item not found",
+          })
+    }
+    res.status(200).json({
+        "success":true,
+        "payload": snack,
+      })
 })
 
 snacks.post("/", async (req, res) => {
