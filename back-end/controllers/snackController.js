@@ -1,5 +1,6 @@
 const express = require("express")
 const { getAllSnacks, getSnack, createSnack, deleteSnack, editSnack} = require("../queries/snacks")
+const confirmHealth = require("../confirmHealth")
 const snacks = express.Router()
 
 snacks.get("/", async (req, res) => {
@@ -40,6 +41,8 @@ snacks.post("/", async (req, res) => {
         }
         return el
     }).join(" ")
+
+    body.is_healthy = confirmHealth(body)
     
     const snack = await createSnack(body)
     if(!snack.name){
