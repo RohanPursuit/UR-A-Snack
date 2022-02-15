@@ -42,7 +42,16 @@ snacks.post("/", async (req, res) => {
 snacks.delete("/:id", async (req, res) => {
     console.log("Delete /snacks/:id")
     const snack = await deleteSnack(req.params.id)
-    res.status(200).json(snack) 
+    if(snack.received === 0){
+        return res.status(404).json({
+            "success":false,
+            "payload": "item not found",
+          })
+    }
+    res.status(200).json({
+        "success":true,
+        "payload": snack,
+      })
 })
 
 snacks.put('/:id', async (req, res) => {
