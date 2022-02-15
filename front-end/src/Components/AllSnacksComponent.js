@@ -16,13 +16,13 @@ function AllSnacks() {
   }, [URL])
     return (
       <div className="AllSnacks">
-        {snacks.map(el => {
+        {snacks.map(snack => {
           return(
-            <Link to={/snacks/ + el.id} key={el.id} className="snack-card">
-              <img src={el.image} alt="" />
+            <Link to={/snacks/ + snack.id} key={snack.id} className="snack-card">
+              <img src={snack.image} alt="" />
               <p>
-                {<HeartHealth snackHealth={el.is_healthy}/>}
-                {el.name}
+                <h4>{<HeartHealth snackHealth={snack.is_healthy}/>}</h4>
+                <h4>{snack.name}</h4>
               </p>
             </Link>
           )
