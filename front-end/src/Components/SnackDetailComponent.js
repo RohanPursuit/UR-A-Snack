@@ -8,7 +8,13 @@ function SnackDetail() {
   
   const [snack, setSnack] = useState({})
 
-  
+  useEffect(() => {
+    axios.get(`${URL}/snacks/${id}`)
+    .then(response => {
+      setSnack(response.data)
+    })
+    .catch(console.log)
+  })
 
     return (
       <div className="SnackDetail">
