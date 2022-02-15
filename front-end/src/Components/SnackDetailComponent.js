@@ -11,14 +11,20 @@ function SnackDetail() {
   useEffect(() => {
     axios.get(`${URL}/snacks/${id}`)
     .then(response => {
+      console.log(response.data)
       setSnack(response.data)
     })
     .catch(console.log)
-  })
+  }, [URL])
 
     return (
       <div className="SnackDetail">
-        Single Snack Detail card
+        <img src={snack.image} alt="" />
+        <div>{snack.name}</div>
+        <div>{snack.is_favorite}</div>
+        <div>{snack.protein}</div>
+        <div>{snack.add_sugar}</div>
+        <div>{snack.fiber}</div>
       </div>
     );
 }
