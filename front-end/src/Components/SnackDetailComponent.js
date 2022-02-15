@@ -1,6 +1,7 @@
 import axios from "axios"
 import {useState, useEffect} from "react"
 import {useParams} from "react-router-dom"
+import { Link } from "react-router-dom"
 import HeartHealth from "./HeartHealth"
 
 function SnackDetail() {
@@ -26,6 +27,9 @@ function SnackDetail() {
         <div>{snack.protein}</div>
         <div>{snack.added_sugar}</div>
         <div>{snack.fiber}</div>
+        <Link to={"/snacks/edit/" + snack.id}>
+          EDIT
+        </Link>
       </div>
     );
 }
