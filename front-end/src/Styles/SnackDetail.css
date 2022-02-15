@@ -1,0 +1,25 @@
+.SnackDetail img {
+	height: 300px;
+	width: 300px;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+.SnackDetail {
+	width: fit-content;
+	grid-column: span 1;
+	margin: 15px;
+	margin-bottom: 30px;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0px 2px 10px rgb(85, 85, 85);
+	border-radius: 3px;
+	color: #eb5e28;
+	transition: all 0.5s ease;
+}
+
+.SnackDetail .Heart {
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
+}
