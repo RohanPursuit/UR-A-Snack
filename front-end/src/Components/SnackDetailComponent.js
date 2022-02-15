@@ -2,7 +2,6 @@ import axios from "axios"
 import {useState, useEffect} from "react"
 import {useParams} from "react-router-dom"
 import HeartHealth from "./HeartHealth"
-import "../Styles/SnackDetail.css"
 
 function SnackDetail() {
   const URL = process.env.REACT_APP_API_URL
