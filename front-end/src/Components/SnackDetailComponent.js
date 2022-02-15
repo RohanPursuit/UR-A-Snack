@@ -14,7 +14,7 @@ function SnackDetail() {
     axios.get(`${URL}/snacks/${id}`)
     .then(response => {
       console.log(response.data)
-      setSnack(response.data)
+      setSnack(response.data.payload)
     })
     .catch(console.log)
   }, [URL])

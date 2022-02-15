@@ -10,7 +10,7 @@ function AllSnacks() {
   useEffect(()=> {
     axios.get(`${URL}/snacks`)
     .then(response => {
-      setSnack(response.data)
+      setSnack(response.data.payload)
     })
     .catch(console.log)
   }, [URL])
