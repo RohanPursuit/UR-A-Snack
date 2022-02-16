@@ -16,7 +16,7 @@ function AllSnacks() {
   }, [URL])
     return (
       <div className="AllSnacks">
-        {snacks.map(snack => {
+        {!snacks.length && snacks.map(snack => {
           return(
             <div className="Snack" key={snack.id}>
               <Link to={/snacks/ + snack.id} className="snack-card">
