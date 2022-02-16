@@ -10,13 +10,13 @@ function AllSnacks() {
   useEffect(()=> {
     axios.get(`${URL}/snacks`)
     .then(response => {
-      setSnack(response.data.payload)
+      setSnack(response.data)
     })
     .catch(console.log)
   }, [URL])
     return (
       <div className="AllSnacks">
-        {!snacks.length && snacks.map(snack => {
+        {snacks.map(snack => {
           return(
             <div className="Snack" key={snack.id}>
               <Link to={/snacks/ + snack.id} className="snack-card">
