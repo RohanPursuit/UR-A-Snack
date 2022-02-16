@@ -18,13 +18,11 @@ function AllSnacks() {
       <div className="AllSnacks">
         {snacks.map(snack => {
           return(
-            <div className="Snack">
-              <Link to={/snacks/ + snack.id} key={snack.id} className="snack-card">
+            <div className="Snack" key={snack.id}>
+              <Link to={/snacks/ + snack.id} className="snack-card">
                 <img src={snack.image} />
-                <p>
                   <h4>{<HeartHealth snackHealth={snack.is_healthy}/>}</h4>
                   <h4 className="snack-name">{snack.name}</h4>
-                </p>
               </Link>
             </div>
           )
