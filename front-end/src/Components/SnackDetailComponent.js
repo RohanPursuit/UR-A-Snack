@@ -25,7 +25,7 @@ function SnackDetail() {
       setSnack(response.data.payload)
     })
     .catch(console.log)
-  }, [URL])
+  }, [URL, id])
 
     return (
       <>
