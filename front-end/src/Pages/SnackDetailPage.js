@@ -1,4 +1,5 @@
 import SnackDetail from "../Components/SnackDetailComponent";
+import "../Styles/SnackDetail.css"
 
 function SnackDetailPage() {
     return (

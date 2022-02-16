@@ -1,10 +1,11 @@
 import heartSolid from "../assets/heart-solid.png";
 import heartOutline from "../assets/heart-regular.png";
 
-function HeartHealth({ snackHealth }) {
+function HeartHealth({snackHealth}) {
+  const arr = snackHealth ? [heartSolid, "healthy food"] : [heartOutline, "unhealthy food"]
   return (
     <>
-      <img src={snackHealth ? heartSolid : heartOutline} alt="" />
+      <img className="Heart" src={arr[0]} alt={arr[1]} />
     </>
   );
 }

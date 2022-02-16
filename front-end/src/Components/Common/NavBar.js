@@ -3,17 +3,17 @@ import "../../Styles/NavBar.css"
 
 function NavBar() {
     return (
-        <div className="NavBar">
+        <nav className="NavBar">
             <Link to="/snacks" className="NavBar-Logo">
-            UR A SNACK
+            <h1>UR A SNACK</h1>
             </Link>
             <div className="New-Snack-container">
                 <Link to="/snacks/new" className="New-Snack-button">
-                    NEW SNACK
+                    New Snack
                 </Link>
             </div>
             
-        </div>
+        </nav>
     );
 }
 

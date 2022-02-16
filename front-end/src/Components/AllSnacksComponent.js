@@ -10,21 +10,21 @@ function AllSnacks() {
   useEffect(()=> {
     axios.get(`${URL}/snacks`)
     .then(response => {
-      setSnack(response.data)
+      setSnack(response.data.payload)
     })
     .catch(console.log)
   }, [URL])
     return (
       <div className="AllSnacks">
-        {snacks.map(el => {
+        {snacks.map(snack => {
           return(
-            <Link to={/snacks/ + el.id} key={el.id} className="snack-card">
-              <img src={el.image} alt="" />
-              <p>
-                {<HeartHealth snackHealth={el.is_healthy}/>}
-                {el.name}
-              </p>
-            </Link>
+            <div className="Snack" key={snack.id}>
+              <Link to={/snacks/ + snack.id} className="snack-card">
+                <img src={snack.image} alt={snack.name}/>
+                  <h4>{<HeartHealth snackHealth={snack.is_healthy}/>}</h4>
+                  <h4 className="snack-name">{snack.name}</h4>
+              </Link>
+            </div>
           )
         })}
       </div>
