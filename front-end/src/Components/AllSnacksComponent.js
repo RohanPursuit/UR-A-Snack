@@ -6,6 +6,7 @@ import {Link} from "react-router-dom"
 function AllSnacks() {
   const URL = process.env.REACT_APP_API_URL
   const [snacks, setSnack] = useState([])
+  
 
   useEffect(()=> {
     axios.get(`${URL}/snacks`)
