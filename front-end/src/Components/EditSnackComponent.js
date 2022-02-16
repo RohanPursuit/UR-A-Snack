@@ -34,7 +34,7 @@ function EditSnack() {
       setSnack(response.data.payload)
     })
     .catch(console.log)
-  }, [URL])
+  }, [URL, id])
 
 
     return (

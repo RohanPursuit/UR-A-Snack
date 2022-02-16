@@ -20,7 +20,7 @@ function AllSnacks() {
           return(
             <div className="Snack" key={snack.id}>
               <Link to={/snacks/ + snack.id} className="snack-card">
-                <img src={snack.image} />
+                <img src={snack.image} alt={snack.name}/>
                   <h4>{<HeartHealth snackHealth={snack.is_healthy}/>}</h4>
                   <h4 className="snack-name">{snack.name}</h4>
               </Link>
