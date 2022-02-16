@@ -1,12 +1,17 @@
 .NavBar {
 	position: fixed;
+	display: flex;
 	top: 0;
 	width: 100%;
-	background-color: #252522;
+	background-color: rgb(37, 36, 34);
 	height: 110px;
 	margin-bottom: 5px;
 	box-shadow: 0px 2px 5px rgb(85, 85, 85);
 	z-index: 999;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 3em 1em 3em;
+	margin-bottom: 1em;
 }
 
 .NavBar-Logo,
@@ -19,13 +24,14 @@
 .New-Snack-button {
 	color: #eb5e28;
 	text-decoration: none;
-	font-family: Marker Felt, fantasy;
+	font-family: Carter One, fantasy;
 }
 
 .NavBar-Logo {
 	font-size: 40px;
 	position: absolute;
 	margin-left: 40px;
+	margin-top: 30px;
 	left: 0px;
 	font-weight: 600;
 }
@@ -56,5 +62,4 @@
 		visibility: visible;
 		content: "URS";
 	}
-
 }

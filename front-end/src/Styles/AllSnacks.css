@@ -22,7 +22,7 @@ a.snack-card {
 	margin-bottom: 20px;
 }
 
-.snack-card {
+.Snack {
 	width: fit-content;
 	grid-column: span 1;
 	margin: 15px;
@@ -35,10 +35,16 @@ a.snack-card {
 	transition: all 0.5s ease;
 }
 
-.snack-card:hover {
+.Snack:hover {
 	transform: scale(1.1);
 	color: #eb5e28;
 	z-index: 0;
+}
+
+.Snack p h4 {
+	margin: 0;
+	font-size: 1em;
+	text-align: center;
 }
 
 .snack-card p {
@@ -50,6 +56,24 @@ a.snack-card {
 	height: 20px;
 	width: 20px;
 	margin-right: 10px;
+}
+
+article.Snacks {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 15px;
+}
+
+article.Snacks div {
+	width: 150px;
+	padding: 1em;
+	background-color: rgb(255, 252, 242);
+}
+article.Snacks img {
+	width: 150px;
+	padding: 1em;
+	background-color: rgb(255, 252, 242);
 }
 
 @media all and (max-width: 1283px) {

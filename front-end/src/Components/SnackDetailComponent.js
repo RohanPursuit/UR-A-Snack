@@ -43,7 +43,7 @@ function SnackDetail() {
         <button onClick={() => nav("/snacks")}>
           Back
         </button>
-        <Link to={"/snacks/edit/" + snack.id}>
+        <Link to={`/snacks/${snack.id}/edit`}>
           EDIT
         </Link>
         <button id={snack.id} onClick={handleDelete}>Delete</button>
